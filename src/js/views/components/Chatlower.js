@@ -26,16 +26,18 @@ class Chatlower extends React.Component{
     }
     render(){
         return (
+
             <div className='users'>
                 {this.joinedUsers}
                 <div className="chating_server">
+                    <div className="timer">30</div>
                     <div>
                         <textarea id="chat-area" style={{width:"220px"}} rows="20" readOnly>{this.chatReducer}</textarea>
                     </div>
                     
                         <input type="text" id="chat-message" style={{width:"220px"}}/>
                     <div ref='chatReducer'>
-                        <input type="button" id="chat-send"/>
+                        <input type="button" id="chat-send" value="send"/>
                     </div>
                 </div>
             </div>
