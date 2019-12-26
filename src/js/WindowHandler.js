@@ -20,13 +20,17 @@ class WindowHandler {
             show: false,
             icon: `${__dirname}/../images/favicon.png`
         });
-        
+        this._2mainWindow = new BrowserWindow({
+            width: 1000,
+            height: 500,
+        });
         this._mainWindow.maximize();
 
         // this._mainWindow.webContents.openDevTools();
 
         // and load the index.html of the app.
         this._mainWindow.loadURL(`file://${__dirname}/../views/start.html`);
+        this._2mainWindow.loadURL(`http://localhost:3000/`);
 
         // Emitted when the window is closed.
         this._mainWindow.on('closed', () => {
@@ -39,6 +43,17 @@ class WindowHandler {
         this._mainWindow.once('ready-to-show', () => {
             this._mainWindow.show();
         })
+        this._2mainWindow.on('closed', () => {
+            // Dereference the window object, usually you would store windows
+            // in an array if your app supports multi windows, this is the time
+            // when you should delete the corresponding element.
+            this._2mainWindow = null;
+        });
+
+        this._2mainWindow.once('ready-to-show', () => {
+            this._2mainWindow.show();
+        })
+
 
     }
 

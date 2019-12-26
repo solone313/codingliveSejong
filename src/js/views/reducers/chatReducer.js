@@ -1,4 +1,4 @@
-module.exports = (state = [], action)=>{
+module.exports = (state = ["채팅창입니다."], action)=>{
 
     switch (action.type){
         case 'CHAT':

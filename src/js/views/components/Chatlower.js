@@ -61,13 +61,13 @@ class Chatlower extends React.Component{
                 {this.joinedUsers}
                 <div className="chating_server">
                     <div className="timer">
-        m: {this.state.time.m} s: {this.state.time.s}</div>
+         {this.state.time.m}분 {this.state.time.s}초 후 교대</div>
                     <div>
                         <textarea id="chat-area" style={{width:"220px"}} rows="20" readOnly></textarea>
                     </div>
-                    
-                        <input type="text" id="chat-message" style={{width:"220px"}}/>
                     <div ref='chatReducer'>
+                        <input type="text" id="chat-message" style={{width:"220px"}}/>
+                    
                         <input type="button" id="chat-send" value="send"/>
                     </div>
                 </div>
