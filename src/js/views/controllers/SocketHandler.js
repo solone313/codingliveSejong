@@ -14,6 +14,14 @@ class SocketHandler{
 
         this.server;
 
+        this.flag = true;
+        
+        setInterval(() => {
+            console.log(this.flag);
+            this.flag = this.flag ? false : true;
+            
+        }, 10000);
+
     }
 
     createServer(port){
@@ -37,8 +45,14 @@ class SocketHandler{
     }
 
     emit(event, data){
-        if(this.isServer){
+        // setTimeout(() => {
+        //     this.flag = false}, 10000);
+        if(this.flag){
+            console.log("1");
             this.server.emit(event, data);
+        }else{
+            console.log("2");
+            this.client.emit(event, data);
         }
     }
 

@@ -78,13 +78,7 @@ class Server {
                 socket
             });
         });
-        socket.on('chat', (data)=> {
-            this.store.dispatch({
-                type: 'CHAT',
-                chat: data,
-                socket
-            });
-        });
+
         socket.on('disconnect', () => {
             console.log(socket,'disconnected')
             this.store.dispatch({type:'USER_DISCONNECT',socket})
@@ -94,6 +88,49 @@ class Server {
             this.sync(socket)
         });
 
+        socket.on("contentChange", (data) => {
+            for (let change of data.changes) {
+                window.mainEditor.executeEdits("", [{
+                    range: new monaco.Range(change.range.startLineNumber,
+                        change.range.startColumn,
+                        change.range.endLineNumber,
+                        change.range.endColumn),
+                    text: change.text
+                }]);
+            }
+
+        });
+
+        socket.on("cursorChange", (data) => {
+
+            // console.log(data)
+
+            // console.log(monaco)
+
+            let selections = [];
+
+            for (let selection of data.selections) {
+                selections.push(new monaco.Selection(
+                    selection.startLineNumber,
+                    selection.startColumn,
+                    selection.endLineNumber,
+                    selection.endColumn
+                ));
+            }
+
+            window.mainEditor.setSelections(selections);
+
+        });
+
+        socket.on("scrollChange", (data) => {
+
+            // console.log(data)
+
+            window.mainEditor.setScrollTop(data.scrollTop);
+
+            window.mainEditor.setScrollLeft(data.scrollLeft);
+
+        });
         // Let's send them current data
 
         this.sync(socket)
@@ -107,9 +144,7 @@ class Server {
     }
 
     emit(event, data) {
-
         this.io.emit(event, data);
-
     }
 
     sync(socket){
