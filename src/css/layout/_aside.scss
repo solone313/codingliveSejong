@@ -5,6 +5,6 @@
 }
 .client{
     .aside{
-        display: none!important;
+        grid-area: main-start / 10 / main-end / -1;
     }
 }
