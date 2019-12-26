@@ -7,9 +7,9 @@
     padding: 0 1rem;
     .chating_server{
         background-color: blue($color: #000000);
-        width: 100px;
+        width: 100vw;
         position: absolute;
-        margin-top: 280px;
+        margin-top: 30vh;
         #chat-send{
             background-color: #555555;  /* Green */
             border: none;
