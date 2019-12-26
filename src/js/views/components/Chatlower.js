@@ -63,7 +63,7 @@ class Chatlower extends React.Component{
                     <div className="timer">
         m: {this.state.time.m} s: {this.state.time.s}</div>
                     <div>
-                        <textarea id="chat-area" style={{width:"220px"}} rows="20" readOnly>{this.chatReducer}</textarea>
+                        <textarea id="chat-area" style={{width:"220px"}} rows="20" readOnly></textarea>
                     </div>
                     
                         <input type="text" id="chat-message" style={{width:"220px"}}/>

@@ -83,6 +83,10 @@ class Server {
             console.log(socket,'disconnected')
             this.store.dispatch({type:'USER_DISCONNECT',socket})
         })
+        socket.on('send_text', () => {
+            console.log(socket,"sendwkqnelan")
+            this.store.dispatch({type:'MESSAGE',socket})
+        })
 
         socket.on('letsSync', ()=>{
             this.sync(socket)

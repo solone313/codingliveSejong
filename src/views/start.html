@@ -42,13 +42,10 @@
         $('#chat-message').value = '';
         $('#chat-message').focus();
         e.preventDefault();
-
+        
+        $('#chat-area').value = $('#chat-area').value+ chatMessage+'\r\n';
       });
 
-      // 서버 쪽에서 전달받은 메시지를 textarea 에 뿌리기
-      socket.on('receive_text', function(message){
-        $('#chat-area').append(message+'\r\n');
-      });
 
     </script>
 
