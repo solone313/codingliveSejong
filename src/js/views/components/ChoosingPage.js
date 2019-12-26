@@ -232,29 +232,33 @@ class ChoosingPage extends React.Component{
     render (){
         return (
             <div ref='choosingPage' className={`choosingPage ${this.state.choosingPageFadeOut ? 'choosingPage--fadeOut' : ''} ${this.state.choosingPageNone ? 'none' : ''}`}>
-
-                <div ref='create' className={`choosingPage__item choice
-                 ${this.state.createSelected ? 'choosingPage__item--selected' : ''}
-                 ${this.state.selected && this.state.joinSelected ? 'choosingPage__item--not-selected' : ''}`}>
-
-                    <img src="../images/create-room.png" alt="" />
-
-                    <span>
-                        Create a Group
-                    </span>
-
+                <div className='image' style={{textAlign:'center',}}>
+                    <img src="../images/favicon.png" width="200" height="200" alt="" />
                 </div>
+                <div className='flex'>
+                    <div ref='create' className={`choosingPage__item choice
+                    ${this.state.createSelected ? 'choosingPage__item--selected' : ''}
+                    ${this.state.selected && this.state.joinSelected ? 'choosingPage__item--not-selected' : ''}`}>
 
-                <div ref='join' className={`choosingPage__item choice
-                 ${this.state.joinSelected ? 'choosingPage__item--selected' : ''}
-                 ${this.state.selected && this.state.createSelected ? 'choosingPage__item--not-selected' : ''}`}>
+                        <img src="../images/create-room.png" alt="" />
 
-                    <img src="../images/enter-room.png" alt="" />
+                        <span>
+                            Create a Group
+                        </span>
 
-                    <span>
-                        Join a Group
-                    </span>
+                    </div>
+                
+                    <div ref='join' className={`choosingPage__item choice
+                    ${this.state.joinSelected ? 'choosingPage__item--selected' : ''}
+                    ${this.state.selected && this.state.createSelected ? 'choosingPage__item--not-selected' : ''}`}>
 
+                        <img src="../images/enter-room.png" alt="" />
+
+                        <span>
+                            Join a Group
+                        </span>
+
+                    </div>
                 </div>
 
                 <div className={`choosingPage__loading ${this.state.loadingShow ? 'choosingPage__loading--show' : ''}`}>

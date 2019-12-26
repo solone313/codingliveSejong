@@ -6,19 +6,20 @@
     right: 0;
     background-color: $back-color;
 
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 
     transition-duration: 0.5s;
-
     &--fadeOut{
         visibility: hidden;
         transform: scale(10);
         opacity: 0;
         transition-duration: 0.5s;
     }
-
+    .flex{
+        display: flex;
+    }
     &__item{
 
         &:first-child {

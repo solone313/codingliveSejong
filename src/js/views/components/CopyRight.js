@@ -7,7 +7,7 @@ class CopyRight extends React.Component{
     render(){
         return (
             <div className='copyRight'>
-                Fork Me On <Link href='https://github.com/pmzi/CodeShare'>GitHub</Link>
+                Fork Me On <Link href='https://github.com/solone313/codingliveSejong'>GitHub</Link>
             </div>
         );
     }
