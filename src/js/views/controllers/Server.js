@@ -78,7 +78,13 @@ class Server {
                 socket
             });
         });
-
+        socket.on('chat', (data)=> {
+            this.store.dispatch({
+                type: 'CHAT',
+                chat: data,
+                socket
+            });
+        });
         socket.on('disconnect', () => {
             console.log(socket,'disconnected')
             this.store.dispatch({type:'USER_DISCONNECT',socket})

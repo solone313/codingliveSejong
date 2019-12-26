@@ -15,7 +15,7 @@ class CppCompiler {
             fileAddress = fileAddress.split('.');
             fileAddress.pop();
             fileAddress = fileAddress.join('.')
-            exec(`start cmd.exe /K ${fileAddress}.exe`)
+            exec(`start cmd.exe /K ${fileAddress}.cpp`)
         });
         
 
