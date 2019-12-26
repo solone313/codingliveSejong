@@ -49,16 +49,19 @@
     }
   },
   "dependencies": {
+    "css-loader": "^3.4.0",
     "electron-compile": "^6.4.3",
     "electron-squirrel-startup": "^1.0.0",
     "ip": "^1.1.5",
     "monaco-editor": "^0.14.2",
     "react": "^16.5.2",
+    "react-countdown-circle-timer": "^1.0.5",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "socket.io": "^2.1.1",
-    "socket.io-client": "^2.1.1"
+    "socket.io-client": "^2.1.1",
+    "style-loader": "^1.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

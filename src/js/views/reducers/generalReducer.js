@@ -2,7 +2,8 @@ module.exports = (state = {
     isServer: false,
     port: '2020',
     showLogin: true,
-    ip: ''
+    ip: '',
+    count: 10000
 }, action) => {
 
     switch (action.type) {

@@ -28,6 +28,28 @@
     <script>
 
         require('../js/views/index.js');
+        var socket = io();
+
+      // send 버튼 클릭 시, event 발생
+      $('#chat-send').on('click', function(e){
+
+        var chatMessage =  $('#chat-message').value;
+        console.log(chatMessage);
+        // send_text event 를 서버 쪽으로 전송
+        socket.emit('send_text',  chatMessage);
+
+        // 메시지 비워주고, 포커스 맞추기
+        $('#chat-message').value = '';
+        $('#chat-message').focus();
+        e.preventDefault();
+
+      });
+
+      // 서버 쪽에서 전달받은 메시지를 textarea 에 뿌리기
+      socket.on('receive_text', function(message){
+        $('#chat-area').append(message+'\r\n');
+      });
+
     </script>
 
 </body>

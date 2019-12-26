@@ -9,11 +9,7 @@
         background-color: blue($color: #000000);
         width: 100vw;
         position: absolute;
-<<<<<<< HEAD
         margin-top: -60vh;
-=======
-        margin-top: 30vh;
->>>>>>> 4de3de2dfb2fd25094deb7a47ed2bf2b4e7c9950
         #chat-send{
             background-color: #555555;  /* Green */
             border: none;
@@ -26,6 +22,7 @@
         }
         .timer{
             font-size: xx-large;
+            
         }
     }
     &__heading{

@@ -41,7 +41,6 @@ class JoinedUsers extends React.Component{
 
 module.exports = connect((state)=>{
     return {
-        joinedUsers: state.joinedUsers,
-        chatReducer: state.chatReducer
+        joinedUsers: state.joinedUsers
     };
 })(JoinedUsers);
