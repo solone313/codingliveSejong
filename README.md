@@ -1,6 +1,6 @@
 # CodeLive
 
-CodeLive is a cross-platform collaborative code editor, designed to be a robust tool to teach programming languages in a class without the need of a bigger screen.
+CodeLivesejong는 더 큰 화면 없이도 클래스에서 프로그래밍 언어를 가르칠 수 있는 강력한 도구가 되도록 설계된  cross-platform collaborative code editor입니다
 
 ## Getting Started
 ![Codelive 1-0](https://raw.githubusercontent.com/minatafreshi/CodeLive/master/src/images/1-0.gif)
@@ -34,10 +34,7 @@ npm start
 We use [SemVer](http://semver.org/) for versioning.
 
 # Contributers
-* **Pouya mozaffarMagham** - [pmzi](https://github.com/pmzi)
-* **Ali ShahAbbasi** - [shahabbasi](https://github.com/shahabbasi)
-* **Mina Tafreshi** - [minatafreshi](https://github.com/minatafreshi)
-* **Majid Ghasemi** - [Thewm](https://github.com/Thewm)
+https://github.com/pmzi/CodeLive 에서 변형했으며, 채팅 시스템과 ui 개선을 맡았습니다.
 
 # Lisence
 CodeLive is licensed under the BSD 3-Clause License.
